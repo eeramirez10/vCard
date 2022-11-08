@@ -1,0 +1,103 @@
+<!-- views/pages/create.ejs -->
+
+<% layout('../layouts/base') -%>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>Create your vCard</h1>
+                <a href="/">Back to the list</a>
+
+                <form class="card  mt-5" method="POST">
+
+                    <div class="card-body">
+
+                        <div class="d-flex justify-content-end">
+                            <button type="submit" class="btn btn-primary  d-flex justify-content-end">
+                                Guardar
+                            </button>
+                        </div>
+
+
+                        <div class="row">
+
+                            <div class="col-md-4">
+                                <label for="firstname">Nombre</label>
+                                <input type="text" class="form-control" name="firstname" id="firstname" 
+                                    placeholder="Max" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="lastname">Apellido</label>
+                                <input type="text" class="form-control" name="lastname" id="lastname"
+                                    placeholder="Redfield" required>
+                            </div>
+
+
+                            <div class="col-md-4">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="phone">Telefono</label>
+                                <input type="tel" class="form-control" name="phone" id="phone"
+                                    placeholder="+1-202-555-0184">
+                            </div>
+
+
+                            <div class="col-md-4">
+                                <label for="street">Calle</label>
+                                <input type="text" class="form-control" name="street" id="street"
+                                    placeholder="Jenna Lane">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="street-no">Numero</label>
+                                <input type="text" class="form-control" name="street_no" id="street-no"
+                                    placeholder="464">
+                            </div>
+
+
+                            <div class="col-md-4">
+                                <label for="city">Ciudad</label>
+                                <input type="text" class="form-control" name="city" id="city" placeholder="Urbandale">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="zip">C.P</label>
+                                <input type="text" class="form-control" name="zip" id="zip" placeholder="50322">
+                            </div>
+
+                            <div class="col-md-4">
+                                <label for="website">Pagina Web</label>
+                                <input type="text" class="form-control" name="website" id="website"
+                                    placeholder="https://random.com">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="company">Empresa</label>
+                                <input type="text" class="form-control" name="company" id="company"
+                                    placeholder="Random Company">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="job">Puesto </label>
+                                <input type="text" class="form-control" name="job" id="job" placeholder="Designer">
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                </form>
+            </div>
+        </div>
+    </div>

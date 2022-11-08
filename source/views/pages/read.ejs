@@ -1,0 +1,181 @@
+<!-- views/pages/read.ejs -->
+
+<% layout('../layouts/base') -%>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>View vCard</h1>
+                <a href="/">Back to the list</a>
+                <br>
+                <a href="/<%- vcard.slug %>/update">Edit card</a>
+                <br>
+
+
+
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                            aria-selected="true">Informacion de contacto</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                            aria-selected="false">QRs</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
+                            aria-selected="false">Contact</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-disabled-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-disabled" type="button" role="tab" aria-controls="pills-disabled"
+                            aria-selected="false" disabled>Disabled</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                        aria-labelledby="pills-home-tab" tabindex="0">
+
+
+
+                        <div class="card">
+                            <div class="head">
+                                <div class="circle"></div>
+                                <div class="img">
+                                    <img src="https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1049&q=80"
+                                        alt="">
+                                </div>
+                            </div>
+
+                            <div class="description">
+                                <h3>
+                                    <%- vcard.firstname %>
+                                </h3>
+                                <h4>
+                                    <%- vcard.job %>
+                                </h4>
+
+                                <h4> <%- vcard.firstname %>
+                                </h4>
+
+                                <h4> <%- vcard.lastname %>
+                                </h4>
+
+                                <h4> <%- vcard.email %>
+                                </h4>
+
+                                <h4> <%- vcard.phone %>
+                                </h4>
+
+                                <h4> <%- vcard.website %>
+                                </h4>
+
+                                <h4> <%- vcard.street %>
+                                </h4>
+
+                                <h4><%- vcard.street_no %>
+                                </h4>
+
+                                <h4> <%- vcard.zip %>
+                                </h4>
+
+                                <h4> <%- vcard.city %>
+                                </h4>
+
+                                <h4> <%- vcard.company %>
+                                </h4>
+
+                                <h4> <%- vcard.job %>
+                                </h4>
+
+
+                            </div>
+
+                            <div class="contact">
+                                <a href="#">Contact</a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
+                        tabindex="0">
+
+                        <div class="row">
+
+                            <div class="col">
+
+
+                                <div class="card" style="width: 18rem;">
+                                    <img src="/public/cards/<%- vcard.slug %>/dynamic-qrcode.png" class="card-img-top"
+                                        alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">QR Dinamico</h5>
+
+                                        <a href="/public/cards/<%- vcard.slug %>/dynamic-qrcode.png" target="_blank"
+                                            class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                            <div class="col">
+
+                                <div class="card" style="width: 18rem;">
+                                    <img src="/public/cards/<%- vcard.slug %>/static-qrcode.png" class="card-img-top"
+                                        alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">QR estatico</h5>
+
+                                        <a href="/public/cards/<%- vcard.slug %>/static-qrcode.png" target="_blank"
+                                            class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="col">
+
+
+                                <div class="card" style="width: 18rem;">
+                                    <img src="/public/cards/<%- vcard.slug %>/static-qrcode-with-logo.png"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">QR estatico con logo</h5>
+
+                                        <a href="/public/cards/<%- vcard.slug %>/static-qrcode-with-logo.png"
+                                            target="_blank" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"
+                        tabindex="0">...</div>
+                    <div class="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab"
+                        tabindex="0">...</div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+        </div>
+    </div>
